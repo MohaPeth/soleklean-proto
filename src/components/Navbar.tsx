@@ -15,7 +15,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <nav className="sticky top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -67,11 +67,8 @@ export const Navbar = () => {
               </button>
             </div>
             <div className="ml-4 flex items-center space-x-4">
-              <span className="text-sm text-slate-600">
-                +221 78 112 53 53
-              </span>
               <Button 
-                onClick={() => scrollToSection("devis")}
+                onClick={() => scrollToSection("reservation")}
                 className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Demander un devis
@@ -132,7 +129,7 @@ export const Navbar = () => {
               </button>
               <div className="px-3 py-2">
                 <Button 
-                  onClick={() => scrollToSection("devis")}
+                  onClick={() => scrollToSection("reservation")}
                   className="bg-blue-600 hover:bg-blue-700 text-white w-full"
                 >
                   Demander un devis

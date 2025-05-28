@@ -7,6 +7,7 @@ import { Reservation } from "@/components/Reservation";
 import { Pricing } from "@/components/Pricing";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
@@ -14,6 +15,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <TopBar />
       <Navbar />
       <Hero />
       <Services />
