@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,7 +16,6 @@ export const Reservation = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
-  const [currentMonth, setCurrentMonth] = useState(new Date());
   
   const [formData, setFormData] = useState({
     name: "",
@@ -116,16 +114,6 @@ export const Reservation = () => {
     setCurrentStep(1);
   };
 
-  const navigateMonth = (direction: 'prev' | 'next') => {
-    const newMonth = new Date(currentMonth);
-    if (direction === 'prev') {
-      newMonth.setMonth(newMonth.getMonth() - 1);
-    } else {
-      newMonth.setMonth(newMonth.getMonth() + 1);
-    }
-    setCurrentMonth(newMonth);
-  };
-
   const isDateDisabled = (date: Date) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -194,32 +182,33 @@ export const Reservation = () => {
                 <h4 className="text-lg font-medium text-slate-700 mb-4">
                   Sélectionnez une date
                 </h4>
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <button
-                      onClick={() => navigateMonth('prev')}
-                      className="p-1 hover:bg-gray-100 rounded"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    <h5 className="font-medium">
-                      {currentMonth.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}
-                    </h5>
-                    <button
-                      onClick={() => navigateMonth('next')}
-                      className="p-1 hover:bg-gray-100 rounded"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
-                  </div>
+                <div className="border rounded-lg p-4 bg-white">
                   <Calendar
                     mode="single"
                     selected={selectedDate}
                     onSelect={setSelectedDate}
                     disabled={isDateDisabled}
-                    month={currentMonth}
-                    onMonthChange={setCurrentMonth}
-                    className="w-full"
+                    className="rounded-md border-0 p-0 w-full"
+                    classNames={{
+                      months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0 w-full",
+                      month: "space-y-4 w-full flex flex-col",
+                      caption: "flex justify-center pt-1 relative items-center mb-4",
+                      caption_label: "text-sm font-medium",
+                      nav: "space-x-1 flex items-center",
+                      nav_button: "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 border border-gray-300 rounded",
+                      nav_button_previous: "absolute left-1",
+                      nav_button_next: "absolute right-1",
+                      table: "w-full border-collapse space-y-1",
+                      head_row: "flex w-full",
+                      head_cell: "text-slate-500 rounded-md w-full font-normal text-sm flex-1 text-center",
+                      row: "flex w-full mt-2",
+                      cell: "relative p-0 text-center text-sm focus-within:relative focus-within:z-20 flex-1",
+                      day: "h-9 w-full p-0 font-normal hover:bg-blue-100 rounded-md transition-colors flex items-center justify-center",
+                      day_selected: "bg-blue-600 text-white hover:bg-blue-700",
+                      day_today: "bg-blue-50 text-blue-600 font-medium",
+                      day_outside: "text-slate-400 opacity-50",
+                      day_disabled: "text-slate-400 opacity-50 cursor-not-allowed",
+                    }}
                   />
                 </div>
               </div>
