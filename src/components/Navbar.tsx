@@ -27,7 +27,7 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-4">
               <button 
                 onClick={() => scrollToSection("accueil")}
@@ -39,13 +39,19 @@ export const Navbar = () => {
                 onClick={() => scrollToSection("services")}
                 className="text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
               >
-                Services
+                Nos Services
               </button>
               <button 
                 onClick={() => scrollToSection("pourquoi-nous")}
                 className="text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
               >
-                Pourquoi nous
+                Pourquoi nous choisir
+              </button>
+              <button 
+                onClick={() => scrollToSection("reservation")}
+                className="text-slate-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Réservation
               </button>
               <button 
                 onClick={() => scrollToSection("tarifs")}
@@ -59,6 +65,11 @@ export const Navbar = () => {
               >
                 Contact
               </button>
+            </div>
+            <div className="ml-4 flex items-center space-x-4">
+              <span className="text-sm text-slate-600">
+                +221 78 112 53 53
+              </span>
               <Button 
                 onClick={() => scrollToSection("devis")}
                 className="bg-blue-600 hover:bg-blue-700 text-white"
@@ -93,13 +104,19 @@ export const Navbar = () => {
                 onClick={() => scrollToSection("services")}
                 className="block text-slate-700 hover:text-blue-600 px-3 py-2 text-base font-medium w-full text-left"
               >
-                Services
+                Nos Services
               </button>
               <button 
                 onClick={() => scrollToSection("pourquoi-nous")}
                 className="block text-slate-700 hover:text-blue-600 px-3 py-2 text-base font-medium w-full text-left"
               >
-                Pourquoi nous
+                Pourquoi nous choisir
+              </button>
+              <button 
+                onClick={() => scrollToSection("reservation")}
+                className="block text-slate-700 hover:text-blue-600 px-3 py-2 text-base font-medium w-full text-left"
+              >
+                Réservation
               </button>
               <button 
                 onClick={() => scrollToSection("tarifs")}
