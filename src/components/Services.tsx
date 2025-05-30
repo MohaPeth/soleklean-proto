@@ -1,7 +1,5 @@
-
 export const Services = () => {
-  return (
-    <section id="services" className="py-20 bg-white">
+  return <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -41,12 +39,7 @@ export const Services = () => {
                 </svg>
                 Nettoyage écologique sans produits chimiques
               </li>
-              <li className="flex items-center text-slate-700">
-                <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                Utilisation d'eau déminéralisée
-              </li>
+              
               <li className="flex items-center text-slate-700">
                 <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -127,6 +120,5 @@ export const Services = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
