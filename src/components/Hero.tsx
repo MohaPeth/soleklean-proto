@@ -1,5 +1,11 @@
+
 import { Button } from "@/components/ui/button";
-export const Hero = () => {
+
+interface HeroProps {
+  onQuoteRequest: () => void;
+}
+
+export const Hero = ({ onQuoteRequest }: HeroProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -8,6 +14,7 @@ export const Hero = () => {
       });
     }
   };
+  
   return <section id="accueil" className="relative pt-16">
       {/* Background image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
@@ -32,7 +39,7 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg" onClick={() => scrollToSection("devis")}>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg" onClick={onQuoteRequest}>
               Demander un devis gratuit
             </Button>
             <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg" onClick={() => scrollToSection("services")}>
