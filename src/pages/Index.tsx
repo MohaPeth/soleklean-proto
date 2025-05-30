@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
@@ -13,20 +14,25 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 const Index = () => {
+  const [isQuoteFormVisible, setIsQuoteFormVisible] = useState(false);
+
+  const openQuoteForm = () => setIsQuoteFormVisible(true);
+  const closeQuoteForm = () => setIsQuoteFormVisible(false);
+
   return (
     <div className="min-h-screen bg-white">
       <TopBar />
-      <Navbar />
-      <Hero />
+      <Navbar onQuoteRequest={openQuoteForm} />
+      <Hero onQuoteRequest={openQuoteForm} />
       <Services />
       <WhyChooseUs />
       <Reservation />
-      <QuoteForm />
-      <Pricing />
+      <Pricing onQuoteRequest={openQuoteForm} />
       <About />
       <Contact />
       <Footer />
       <WhatsAppFloat />
+      <QuoteForm isVisible={isQuoteFormVisible} onClose={closeQuoteForm} />
     </div>
   );
 };

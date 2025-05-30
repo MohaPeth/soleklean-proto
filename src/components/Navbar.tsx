@@ -1,8 +1,13 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
-export const Navbar = () => {
+interface NavbarProps {
+  onQuoteRequest: () => void;
+}
+
+export const Navbar = ({ onQuoteRequest }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -63,7 +68,7 @@ export const Navbar = () => {
             </div>
             <div className="ml-4 flex items-center space-x-4">
               <Button
-                onClick={() => scrollToSection("reservation")}
+                onClick={onQuoteRequest}
                 className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Demander un devis
@@ -124,7 +129,7 @@ export const Navbar = () => {
               </button>
               <div className="px-3 py-2">
                 <Button
-                  onClick={() => scrollToSection("reservation")}
+                  onClick={onQuoteRequest}
                   className="bg-blue-600 hover:bg-blue-700 text-white w-full"
                 >
                   Demander un devis

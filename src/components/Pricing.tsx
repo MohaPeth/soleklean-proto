@@ -1,7 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 
-export const Pricing = () => {
+interface PricingProps {
+  onQuoteRequest: () => void;
+}
+
+export const Pricing = ({ onQuoteRequest }: PricingProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -62,7 +65,7 @@ export const Pricing = () => {
             </ul>
 
             <Button 
-              onClick={() => scrollToSection("devis")}
+              onClick={onQuoteRequest}
               className="w-full bg-blue-600 hover:bg-blue-700 text-white"
             >
               Demander un devis
@@ -115,7 +118,7 @@ export const Pricing = () => {
             </ul>
 
             <Button 
-              onClick={() => scrollToSection("devis")}
+              onClick={onQuoteRequest}
               className="w-full bg-white text-blue-600 hover:bg-blue-50"
             >
               Choisir l'abonnement
@@ -162,7 +165,7 @@ export const Pricing = () => {
             </ul>
 
             <Button 
-              onClick={() => scrollToSection("devis")}
+              onClick={onQuoteRequest}
               variant="outline" 
               className="w-full border-slate-300 text-slate-700 hover:bg-slate-50"
             >
@@ -176,7 +179,7 @@ export const Pricing = () => {
             * Tarifs indicatifs pour installations standards. Devis personnalisé selon surface et complexité.
           </p>
           <Button 
-            onClick={() => scrollToSection("devis")}
+            onClick={onQuoteRequest}
             size="lg" 
             className="bg-blue-600 hover:bg-blue-700 text-white"
           >
