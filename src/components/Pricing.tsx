@@ -30,7 +30,7 @@ export const Pricing = () => {
             </div>
             
             <div className="text-center mb-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">15.000 CFA</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">À partir de 15.000 CFA</div>
               <p className="text-slate-500">Nettoyage + Inspection</p>
             </div>
 
@@ -83,7 +83,7 @@ export const Pricing = () => {
             </div>
             
             <div className="text-center mb-6">
-              <div className="text-4xl font-bold text-white mb-2">10.000 CFA</div>
+              <div className="text-4xl font-bold text-white mb-2">À partir de 10.000 CFA</div>
               <p className="text-blue-100">par passage</p>
             </div>
 
