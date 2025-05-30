@@ -1,4 +1,3 @@
-
 export const WhyChooseUs = () => {
   const advantages = [
     {
@@ -43,40 +42,6 @@ export const WhyChooseUs = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Notre engagement qualité et notre expertise font la différence
           </p>
-        </div>
-
-        {/* Images illustrant l'expertise */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/4177810c-0490-4b9c-8e7a-f8b0a55774b9.png" 
-              alt="Technicien SOLEKLEAN inspectant des panneaux solaires avec équipement professionnel"
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <h4 className="text-white font-semibold">Inspection professionnelle</h4>
-            </div>
-          </div>
-          <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/086532f8-48ea-4233-a5be-38820635505e.png" 
-              alt="Nettoyage professionnel de vitrages par technicien SOLEKLEAN"
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <h4 className="text-white font-semibold">Nettoyage de vitrages</h4>
-            </div>
-          </div>
-          <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/acf659ab-4f08-4b48-b869-ff1b244c0708.png" 
-              alt="Technicien nettoyant des panneaux solaires dans un champ photovoltaïque"
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <h4 className="text-white font-semibold">Installations à grande échelle</h4>
-            </div>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
