@@ -1,23 +1,19 @@
 import { Button } from "@/components/ui/button";
-
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section id="accueil" className="relative pt-16">
+  return <section id="accueil" className="relative pt-16">
       {/* Background image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/soleklean_hero.jpeg')",
-          zIndex: 0,
-        }}
-      >
+      <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
+      backgroundImage: "url('/soleklean_hero.jpeg')",
+      zIndex: 0
+    }}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 to-white/90" />
       </div>
@@ -36,19 +32,10 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
-              onClick={() => scrollToSection("devis")}
-            >
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg" onClick={() => scrollToSection("devis")}>
               Demander un devis gratuit
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
-              onClick={() => scrollToSection("services")}
-            >
+            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg" onClick={() => scrollToSection("services")}>
               Découvrir nos services
             </Button>
           </div>
@@ -57,29 +44,19 @@ export const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-slate-900 mb-2">
                 Panneaux solaires
               </h3>
-              <p className="text-slate-600">
-                Amélioration jusqu'à 30% de performance
-              </p>
+              <p className="text-slate-600">Un nettoyage efficace pour des panneaux au top !</p>
             </div>
 
             <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                 </svg>
               </div>
@@ -93,11 +70,7 @@ export const Hero = () => {
 
             <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                <svg className="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -111,6 +84,5 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
