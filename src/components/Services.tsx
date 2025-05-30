@@ -1,3 +1,4 @@
+
 export const Services = () => {
   return <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -8,6 +9,15 @@ export const Services = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Des solutions de nettoyage adaptées à chaque type d'installation
           </p>
+        </div>
+
+        {/* Image professionnelle */}
+        <div className="mb-16 rounded-2xl overflow-hidden shadow-lg">
+          <img 
+            src="/lovable-uploads/ecd62c6b-e821-4890-83ba-2fe2294972e9.png" 
+            alt="Technicien SOLEKLEAN en action utilisant un équipement de nettoyage professionnel"
+            className="w-full h-64 md:h-80 object-cover"
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
