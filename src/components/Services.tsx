@@ -1,4 +1,3 @@
-
 export const Services = () => {
   return <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,11 +12,7 @@ export const Services = () => {
 
         {/* Image professionnelle */}
         <div className="mb-16 rounded-2xl overflow-hidden shadow-lg">
-          <img 
-            src="/lovable-uploads/ecd62c6b-e821-4890-83ba-2fe2294972e9.png" 
-            alt="Technicien SOLEKLEAN en action utilisant un équipement de nettoyage professionnel"
-            className="w-full h-64 md:h-80 object-cover"
-          />
+          <img src="/lovable-uploads/ecd62c6b-e821-4890-83ba-2fe2294972e9.png" alt="Technicien SOLEKLEAN en action utilisant un équipement de nettoyage professionnel" className="w-full h-64 md:h-80 object-cover" />
         </div>
 
         {/* Galerie avant/après pour panneaux solaires */}
@@ -27,17 +22,9 @@ export const Services = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/123cab86-4683-4b73-9c7c-b34e5fb62942.png" 
-                alt="Comparaison avant/après nettoyage de panneaux solaires - amélioration visible de la propreté"
-                className="w-full h-64 object-cover rounded-xl shadow-lg"
-              />
-              <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Avant
-              </div>
-              <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Après
-              </div>
+              <img src="/lovable-uploads/123cab86-4683-4b73-9c7c-b34e5fb62942.png" alt="Comparaison avant/après nettoyage de panneaux solaires - amélioration visible de la propreté" className="w-full h-64 object-cover rounded-xl shadow-lg" />
+              <div className="absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-green-500">Après</div>
+              <div className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-red-600">Avant</div>
             </div>
             <div className="flex flex-col justify-center">
               <h4 className="text-xl font-bold text-slate-900 mb-4">
