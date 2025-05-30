@@ -12,7 +12,7 @@ export const Services = () => {
 
         {/* Image professionnelle */}
         <div className="mb-16 rounded-2xl overflow-hidden shadow-lg">
-          <img src="/lovable-uploads/ecd62c6b-e821-4890-83ba-2fe2294972e9.png" alt="Technicien SOLEKLEAN en action utilisant un équipement de nettoyage professionnel" className="w-full h-64 md:h-80 object-cover" />
+          
         </div>
 
         {/* Galerie avant/après pour panneaux solaires */}
