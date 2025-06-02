@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
-
 interface HeroProps {
   onQuoteRequest: () => void;
 }
-
-export const Hero = ({ onQuoteRequest }: HeroProps) => {
+export const Hero = ({
+  onQuoteRequest
+}: HeroProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -14,7 +13,6 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
       });
     }
   };
-  
   return <section id="accueil" className="relative pt-16">
       {/* Background image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
@@ -33,11 +31,7 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
             <span className="text-blue-600">Panneaux Solaires</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
-            Expert en nettoyage professionnel et écologique de panneaux solaires, façades et vitrages. 
-            Boostez le rendement de vos installations photovoltaïques jusqu'à 30% avec nos solutions respectueuses de l'environnement. 
-            Intervention rapide partout en France, devis gratuit sous 24h.
-          </p>
+          <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">Expert en nettoyage professionnel et écologique de panneaux solaires, façades et vitrages. Boostez le rendement de vos installations photovoltaïques jusqu'à 30% avec nos solutions respectueuses de l'environnement. Intervention rapide partout , devis gratuit sous 24h.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg" onClick={onQuoteRequest}>
