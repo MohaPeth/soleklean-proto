@@ -45,8 +45,8 @@ export const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative">
               <img alt="Comparaison avant/après nettoyage de panneaux solaires - amélioration visible de la propreté" className="w-full h-64 object-cover rounded-xl shadow-lg" src="/lovable-uploads/ece12f55-c23a-4b4b-909e-a6606ca17634.jpg" />
-              <div className="absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-red-500">Après</div>
-              <div className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-red-600">Avant</div>
+              <div className="absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-red-500">Avant</div>
+              <div className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-green-500">Après</div>
             </div>
             <div className="flex flex-col justify-center">
               <h4 className="text-xl font-bold text-slate-900 mb-4">
