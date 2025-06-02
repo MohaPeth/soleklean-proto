@@ -1,4 +1,3 @@
-
 export const Services = () => {
   return <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,31 +13,19 @@ export const Services = () => {
         {/* Images illustrant l'expertise - déplacées ici */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/4177810c-0490-4b9c-8e7a-f8b0a55774b9.png" 
-              alt="Technicien SOLEKLEAN inspectant des panneaux solaires avec équipement professionnel"
-              className="w-full h-48 object-cover"
-            />
+            <img src="/lovable-uploads/4177810c-0490-4b9c-8e7a-f8b0a55774b9.png" alt="Technicien SOLEKLEAN inspectant des panneaux solaires avec équipement professionnel" className="w-full h-48 object-cover" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
               <h4 className="text-white font-semibold">Inspection professionnelle</h4>
             </div>
           </div>
           <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/086532f8-48ea-4233-a5be-38820635505e.png" 
-              alt="Nettoyage professionnel de vitrages par technicien SOLEKLEAN"
-              className="w-full h-48 object-cover"
-            />
+            <img src="/lovable-uploads/086532f8-48ea-4233-a5be-38820635505e.png" alt="Nettoyage professionnel de vitrages par technicien SOLEKLEAN" className="w-full h-48 object-cover" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
               <h4 className="text-white font-semibold">Nettoyage de vitrages</h4>
             </div>
           </div>
           <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/acf659ab-4f08-4b48-b869-ff1b244c0708.png" 
-              alt="Technicien nettoyant des panneaux solaires dans un champ photovoltaïque"
-              className="w-full h-48 object-cover"
-            />
+            <img src="/lovable-uploads/acf659ab-4f08-4b48-b869-ff1b244c0708.png" alt="Technicien nettoyant des panneaux solaires dans un champ photovoltaïque" className="w-full h-48 object-cover" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
               <h4 className="text-white font-semibold">Installations à grande échelle</h4>
             </div>
@@ -57,8 +44,8 @@ export const Services = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative">
-              <img src="/lovable-uploads/123cab86-4683-4b73-9c7c-b34e5fb62942.png" alt="Comparaison avant/après nettoyage de panneaux solaires - amélioration visible de la propreté" className="w-full h-64 object-cover rounded-xl shadow-lg" />
-              <div className="absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-green-500">Après</div>
+              <img alt="Comparaison avant/après nettoyage de panneaux solaires - amélioration visible de la propreté" className="w-full h-64 object-cover rounded-xl shadow-lg" src="/lovable-uploads/ece12f55-c23a-4b4b-909e-a6606ca17634.jpg" />
+              <div className="absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-red-500">Après</div>
               <div className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-red-600">Avant</div>
             </div>
             <div className="flex flex-col justify-center">
