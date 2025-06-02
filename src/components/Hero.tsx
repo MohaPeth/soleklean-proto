@@ -29,13 +29,14 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-            La propreté de vos panneaux,{" "}
-            <span className="text-blue-600">notre énergie</span>
+            SOLEKLEAN - Nettoyage Écologique de{" "}
+            <span className="text-blue-600">Panneaux Solaires</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
-            Boostez l'énergie de vos installations avec des solutions de
-            nettoyage professionnelles et écologiques
+            Expert en nettoyage professionnel et écologique de panneaux solaires, façades et vitrages. 
+            Boostez le rendement de vos installations photovoltaïques jusqu'à 30% avec nos solutions respectueuses de l'environnement. 
+            Intervention rapide partout en France, devis gratuit sous 24h.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -55,10 +56,10 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                Panneaux solaires
-              </h3>
-              <p className="text-slate-600">Un nettoyage efficace pour des panneaux au top !</p>
+              <h2 className="text-lg font-semibold text-slate-900 mb-2">
+                Nettoyage Panneaux Solaires
+              </h2>
+              <p className="text-slate-600">Optimisation du rendement énergétique avec un nettoyage écologique professionnel sans produits chimiques nocifs</p>
             </div>
 
             <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
@@ -67,11 +68,11 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
                   <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                Façades & vitrages
-              </h3>
+              <h2 className="text-lg font-semibold text-slate-900 mb-2">
+                Nettoyage Façades & Vitrages
+              </h2>
               <p className="text-slate-600">
-                Nettoyage écologique sans produits chimiques
+                Solutions de nettoyage respectueuses de l'environnement pour façades, baies vitrées et surfaces commerciales
               </p>
             </div>
 
@@ -81,11 +82,11 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                Intervention rapide
-              </h3>
+              <h2 className="text-lg font-semibold text-slate-900 mb-2">
+                Intervention Rapide 48h
+              </h2>
               <p className="text-slate-600">
-                Intervention sous 48h, équipe qualifiée
+                Service professionnel avec équipe qualifiée, matériel spécialisé et garantie qualité pour tous types d'installations
               </p>
             </div>
           </div>
