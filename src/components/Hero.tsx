@@ -21,8 +21,8 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
       backgroundImage: "url('/soleklean_hero.jpeg')",
       zIndex: 0
     }}>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 to-white/90" />
+        {/* Overlay with reduced opacity */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 to-white/60" />
       </div>
 
       {/* Content */}
