@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,6 +23,7 @@ import {
 import { cn } from "@/lib/utils";
 import { addDays, format, isBefore, isToday, startOfTomorrow } from "date-fns";
 import { fr } from "date-fns/locale";
+import { sendAppointmentEmail } from "../config/emailjs";
 
 export const Reservation = () => {
   const { toast } = useToast();
@@ -110,7 +110,7 @@ export const Reservation = () => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.address || !formData.serviceType) {
       toast({
         title: "Erreur",
@@ -126,28 +126,37 @@ export const Reservation = () => {
       timeSlot: selectedTimeSlot,
     };
 
-    console.log("Données de réservation:", reservationData);
+    try {
+      await sendAppointmentEmail(reservationData);
 
-    toast({
-      title: "Réservation confirmée !",
-      description:
-        "Nous vous contacterons dans les plus brefs délais pour confirmer votre intervention.",
-    });
+      toast({
+        title: "Réservation confirmée !",
+        description:
+          "Nous vous contacterons dans les plus brefs délais pour confirmer votre intervention.",
+      });
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      serviceType: "",
-      address: "",
-      surfaceDetails: "",
-      message: "",
-      wantCallback: false,
-    });
-    setSelectedDate(addDays(new Date(), 2));
-    setSelectedTimeSlot("");
-    setCurrentStep(1);
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        serviceType: "",
+        address: "",
+        surfaceDetails: "",
+        message: "",
+        wantCallback: false,
+      });
+      setSelectedDate(addDays(new Date(), 2));
+      setSelectedTimeSlot("");
+      setCurrentStep(1);
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description:
+          "Une erreur est survenue lors de l'envoi de votre demande. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    }
   };
 
   const isDateDisabled = (date: Date) => {
@@ -284,7 +293,8 @@ export const Reservation = () => {
                       <p className="flex items-center text-blue-700 text-sm sm:text-base">
                         <CalendarIcon className="h-4 w-4 mr-2" />
                         <span>
-                          Date : {format(selectedDate, "dd MMMM yyyy", { locale: fr })}
+                          Date :{" "}
+                          {format(selectedDate, "dd MMMM yyyy", { locale: fr })}
                         </span>
                       </p>
                       {selectedTimeSlot && (
@@ -359,11 +369,14 @@ export const Reservation = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="name" className="text-slate-700 font-medium">
+                  <Label
+                    htmlFor="reservation-name"
+                    className="text-slate-700 font-medium"
+                  >
                     Nom / Entreprise *
                   </Label>
                   <Input
-                    id="name"
+                    id="reservation-name"
                     type="text"
                     value={formData.name}
                     onChange={(e) =>
@@ -376,11 +389,14 @@ export const Reservation = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="email" className="text-slate-700 font-medium">
+                  <Label
+                    htmlFor="reservation-email"
+                    className="text-slate-700 font-medium"
+                  >
                     Email *
                   </Label>
                   <Input
-                    id="email"
+                    id="reservation-email"
                     type="email"
                     value={formData.email}
                     onChange={(e) =>
@@ -393,11 +409,14 @@ export const Reservation = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="phone" className="text-slate-700 font-medium">
+                  <Label
+                    htmlFor="reservation-phone"
+                    className="text-slate-700 font-medium"
+                  >
                     Téléphone *
                   </Label>
                   <Input
-                    id="phone"
+                    id="reservation-phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) =>
@@ -411,7 +430,7 @@ export const Reservation = () => {
 
                 <div>
                   <Label
-                    htmlFor="serviceType"
+                    htmlFor="reservation-service"
                     className="text-slate-700 font-medium"
                   >
                     Type de service *
@@ -422,7 +441,7 @@ export const Reservation = () => {
                       setFormData({ ...formData, serviceType: value })
                     }
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger id="reservation-service" className="mt-1">
                       <SelectValue placeholder="Sélectionnez un service" />
                     </SelectTrigger>
                     <SelectContent>
@@ -441,7 +460,7 @@ export const Reservation = () => {
 
               <div className="flex items-center space-x-2">
                 <Checkbox
-                  id="callback"
+                  id="reservation-callback"
                   checked={formData.wantCallback}
                   onCheckedChange={(checked) =>
                     setFormData({
@@ -450,7 +469,10 @@ export const Reservation = () => {
                     })
                   }
                 />
-                <Label htmlFor="callback" className="text-slate-700">
+                <Label
+                  htmlFor="reservation-callback"
+                  className="text-slate-700"
+                >
                   Être rappelé(e) par téléphone
                 </Label>
               </div>
@@ -461,11 +483,14 @@ export const Reservation = () => {
           {currentStep === 3 && (
             <div className="space-y-6">
               <div>
-                <Label htmlFor="address" className="text-slate-700 font-medium">
+                <Label
+                  htmlFor="reservation-address"
+                  className="text-slate-700 font-medium"
+                >
                   Adresse du site à nettoyer *
                 </Label>
                 <Input
-                  id="address"
+                  id="reservation-address"
                   type="text"
                   value={formData.address}
                   onChange={(e) =>
@@ -479,13 +504,13 @@ export const Reservation = () => {
 
               <div>
                 <Label
-                  htmlFor="surfaceDetails"
+                  htmlFor="reservation-surface"
                   className="text-slate-700 font-medium"
                 >
                   Surface estimée / Détails
                 </Label>
                 <Textarea
-                  id="surfaceDetails"
+                  id="reservation-surface"
                   value={formData.surfaceDetails}
                   onChange={(e) =>
                     setFormData({ ...formData, surfaceDetails: e.target.value })
@@ -497,11 +522,14 @@ export const Reservation = () => {
               </div>
 
               <div>
-                <Label htmlFor="message" className="text-slate-700 font-medium">
+                <Label
+                  htmlFor="reservation-message"
+                  className="text-slate-700 font-medium"
+                >
                   Message libre
                 </Label>
                 <Textarea
-                  id="message"
+                  id="reservation-message"
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })

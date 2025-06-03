@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+🌿 Bienvenue sur le projet Soleklean
+Informations sur le projet
+🔗 URL : https://soleklean-proto.vercel.app/
+🎯 Objectif : Présenter les services de nettoyage écologique de Soleklean avec une expérience digitale moderne et engageante.
 
-## Project info
+🛠️ Comment modifier ce projet ?
+💻 Travailler localement avec votre IDE
+Souhaitez-vous travailler hors ligne ou utiliser votre environnement de développement favori ? Suivez ces étapes :
 
-**URL**: https://lovable.dev/projects/085add73-8a25-4db3-8169-fab4691a98a1
+Prérequis :
+Node.js & npm installés – Guide d’installation avec nvm
+Étapes :
+bash
 
-## How can I edit this code?
+# 1. Cloner le dépôt
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/085add73-8a25-4db3-8169-fab4691a98a1) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# 2. Accéder au répertoire du projet
+
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# 3. Installer les dépendances
+
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Démarrer le serveur de développement
+
 npm run dev
-```
+✅ Une fois lancé, rendez-vous sur http://localhost:5173 pour voir vos modifications en temps réel.
 
-**Edit a file directly in GitHub**
+📝 Modifier directement dans GitHub
+Rendez-vous sur le fichier à éditer.
+Cliquez sur l’icône ✏️ (en haut à droite).
+Faites vos modifications et validez-les.
+💼 Utiliser GitHub Codespaces
+GitHub Codespaces vous permet de coder directement depuis le navigateur :
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Sur la page d’accueil du repo, cliquez sur le bouton Code .
+Allez dans l’onglet Codespaces .
+Cliquez sur New codespace .
+Codez, sauvegardez et poussez vos changements !
+⚙️ Technologies utilisées
+Ce projet est construit avec les technologies suivantes :
 
-**Use GitHub Codespaces**
+OUTIL
+UTILISATION
+Vite
+Environnement de développement rapide
+TypeScript
+Typage statique et meilleure maintenabilité
+React
+Interface utilisateur dynamique
+Tailwind CSS
+Styling rapide et modulaire
+shadcn/ui
+Composants UI modernes et accessibles
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+☁️ Déployer votre projet
+Le déploiement est simple grâce à Vercel :
 
-## What technologies are used for this project?
+Poussez vos modifications sur la branche principale (main ou master)
+Le déploiement se fait automatiquement via Vercel
+Vous recevez un lien public dès que le build est terminé
+🌐 Connecter un domaine personnalisé
+Donnez à votre site une touche professionnelle grâce à un domaine personnalisé comme www.soleklean.fr.
 
-This project is built with:
+🔧 Étapes à suivre :
+Connectez-vous à votre compte Vercel
+Sélectionnez votre projet
+Allez dans Domains > Add Domain
+Entrez votre domaine
+Suivez les instructions fournies par Vercel pour configurer votre DNS
+🔍 Documentation officielle : 🔗 Ajouter un domaine personnalisé sur Vercel
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📬 Besoin d’aide ou d’un conseil ?
+N’hésitez pas à consulter la documentation officielle de Vercel ou à nous contacter via notre support technique.
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/085add73-8a25-4db3-8169-fab4691a98a1) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🌱 Soleklean - Nettoyage écologique, efficace et responsable.
+✨ Parce que la propreté commence par des choix durables.
