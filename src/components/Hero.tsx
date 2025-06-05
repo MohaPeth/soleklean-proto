@@ -41,7 +41,7 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
             <span className="text-blue-600">Panneaux Solaires</span>
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="mt-8 text-lg md:text-xl text-slate-900 max-w-3xl mx-auto">
             Expert en nettoyage professionnel et écologique de panneaux
             solaires, façades et vitrages. Boostez le rendement de vos
             installations photovoltaïques jusqu'à 30% avec nos solutions
