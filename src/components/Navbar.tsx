@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -66,14 +65,14 @@ export const Navbar = ({ onQuoteRequest }: NavbarProps) => {
                 Contact
               </button>
             </div>
-            <div className="ml-4 flex items-center space-x-4">
+            {/* <div className="ml-4 flex items-center space-x-4">
               <Button
                 onClick={onQuoteRequest}
                 className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Demander un devis
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile menu button */}
@@ -127,14 +126,14 @@ export const Navbar = ({ onQuoteRequest }: NavbarProps) => {
               >
                 Contact
               </button>
-              <div className="px-3 py-2">
+              {/* <div className="px-3 py-2">
                 <Button
                   onClick={onQuoteRequest}
                   className="bg-blue-600 hover:bg-blue-700 text-white w-full"
                 >
                   Demander un devis
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}
