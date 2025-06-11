@@ -38,16 +38,25 @@ export const Hero = ({ onQuoteRequest }: HeroProps) => {
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
             Nettoyage Écologique de
             <br />
-            <span className="text-blue-600">Panneaux Solaires</span>
+            <span className="text-solarYellow">Panneaux Solaires</span>
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl text-slate-900 max-w-3xl mx-auto">
+          <p className="mt-8 text-lg md:text-xl  text-slate-900 max-w-3xl mx-auto">
             Expert en nettoyage professionnel et écologique de panneaux
             solaires, façades et vitrages. Boostez le rendement de vos
             installations photovoltaïques jusqu'à 30% avec nos solutions
             respectueuses de l'environnement. Intervention rapide partout, devis
             gratuit sous 24h.
           </p>
+
+          <div className="mt-8">
+            <Button
+              onClick={onQuoteRequest}
+              className="bg-solarYellow hover:bg-solarYellowHover text-white w-full "
+            >
+              Demander un devis
+            </Button>
+          </div>
         </div>
       </div>
     </section>
