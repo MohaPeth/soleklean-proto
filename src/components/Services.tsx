@@ -70,7 +70,7 @@ export const Services = () => {
                 Avant Nettoyage
               </div>
               <div className="absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm font-semibold bg-green-500">
-                Après Nettoyage SOLEKLEAN
+                Après SOLEKLEAN
               </div>
             </div>
             <div className="flex flex-col justify-center">
